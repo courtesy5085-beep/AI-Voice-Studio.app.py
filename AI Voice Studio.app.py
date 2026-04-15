@@ -48,7 +48,7 @@ st.markdown("""
 
     * { font-family: 'Space Grotesk', sans-serif; }
 
-  .vfx-header {
+  .AI Voice Studio-header {
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
         background-size: 400% 400%;
         animation: gradientShift 15s ease infinite;
@@ -86,7 +86,7 @@ st.markdown("""
         100% { transform: translate(50px, 50px); }
     }
 
-  .vfx-title {
+  .AI Voice Studio-title {
         font-family: 'Orbitron', sans-serif;
         font-size: 4rem;
         font-weight: 900;
@@ -102,7 +102,7 @@ st.markdown("""
         to { text-shadow: 0 0 30px rgba(255,255,255,1), 0 0 60px rgba(35, 166, 213, 0.8); }
     }
 
-  .glass-card-vfx {
+  .glass-card-AI Voice Studio {
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(25px) saturate(180%);
         border: 1px solid rgba(255, 255, 255, 0.18);
@@ -127,11 +127,11 @@ st.markdown("""
         transition: left 0.5s;
     }
 
-  .glass-card-vfx:hover::before {
+  .glass-card-AI Voice Studio:hover::before {
         left: 100%;
     }
 
-  .glass-card-vfx:hover {
+  .glass-card-AI Voice Studio:hover {
         transform: translateY(-10px) scale(1.02);
         box-shadow: 0 20px 60px rgba(102, 126, 234, 0.5),
                     0 0 80px rgba(238, 119, 82, 0.3);
@@ -179,7 +179,7 @@ st.markdown("""
         height: 300px;
     }
 
-  .metric-vfx {
+  .metric-AI Voice Studio {
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         padding: 1.5rem;
         border-radius: 20px;
@@ -196,7 +196,7 @@ st.markdown("""
         50% { box-shadow: 0 15px 50px rgba(102, 126, 234, 0.7); }
     }
 
-  .metric-vfx h3 {
+  .metric-AI Voice Studio h3 {
         font-size: 2.5rem;
         font-weight: 800;
         margin: 0;
@@ -320,8 +320,8 @@ with col2:
         st_lottie(LOTTIE_MIC, height=150, key="header_anim")
 
 st.markdown("""
-<div class="vfx-header">
-    <h1 class="vfx-title">🎙️ AI VOICE STUDIO</h1>
+<div class="AI Voice Studio-header">
+    <h1 class="-title">🎙️ AI VOICE STUDIO</h1>
     <p class="typewriter" style='font-size: 1.4rem; margin-top: 1rem; font-weight: 300;'>
         Next-Gen Text ↔ Speech | AI Translation | Edge TTS | Batch Processing
     </p>
@@ -333,7 +333,7 @@ with st.sidebar:
     if LOTTIE_AI:
         st_lottie(LOTTIE_AI, height=120, key="sidebar_ai")
 
-    st.title("⚙️ VFX Control Panel")
+    st.title("⚙️ AI Voice Studio Control Panel")
 
     st.divider()
     engine = st.selectbox(
@@ -432,7 +432,7 @@ def show_confetti():
 
 # ---------- MAIN TABS ----------
 tab1, tab2, tab3, tab4 = st.tabs([
-    "🔊 Text → Speech VFX",
+    "🔊 Text → Speech",
     "🎤 Speech → Text",
     "📄 Batch Converter",
     "📜 History"
@@ -443,8 +443,8 @@ with tab1:
     col1, col2 = st.columns([3, 2])
 
     with col1:
-        st.markdown('<div class="glass-card-vfx">', unsafe_allow_html=True)
-        st.subheader("✍️ Enter Text with VFX")
+        st.markdown('<div class="glass-card-">', unsafe_allow_html=True)
+        st.subheader("✍️ Enter Text")
 
         if LOTTIE_WAVE:
             st_lottie(LOTTIE_WAVE, height=80, key="wave_anim")
@@ -469,7 +469,7 @@ with tab1:
         st.markdown('</div>', unsafe_allow_html=True)
 
     with col2:
-        st.markdown('<div class="glass-card-vfx">', unsafe_allow_html=True)
+        st.markdown('<div class="glass-card-">', unsafe_allow_html=True)
         st.subheader("🌍 Settings")
 
         lang_display = st.selectbox("Language", list(LANGUAGES.keys()))
@@ -553,15 +553,15 @@ with tab1:
                     use_container_width=True
                 )
 
-                add_history("TTS-VFX", text_input, final_lang)
+                add_history("TTS", text_input, final_lang)
                 time.sleep(1)
                 progress.empty()
                 status.empty()
 
 # ---------- TAB 2: STT ----------
 with tab2:
-    st.markdown('<div class="glass-card-vfx">', unsafe_allow_html=True)
-    st.subheader("🎤 Speech Recognition VFX")
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.subheader("🎤 Speech Recognition")
 
     uploaded_audio = st.file_uploader("Upload Audio", type=["wav", "mp3", "ogg", "m4a"])
 
@@ -598,8 +598,8 @@ with tab2:
 
 # ---------- TAB 3: BATCH ----------
 with tab3:
-    st.markdown('<div class="glass-card-vfx">', unsafe_allow_html=True)
-    st.subheader("📁 Batch Converter VFX")
+    st.markdown('<div class="glass-card">', unsafe_allow_html=True)
+    st.subheader("📁 Batch Converter")
 
     files = st.file_uploader("Drop Multiple Files", type=["pdf", "docx", "txt"], accept_multiple_files=True)
 
