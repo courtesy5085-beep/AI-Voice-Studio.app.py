@@ -1,0 +1,10 @@
+streamlit
+gtts
+edge-tts
+SpeechRecognition
+langdetect
+deep-translator
+pypdf
+python-docx
+pydub
+requests
